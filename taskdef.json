@@ -1,0 +1,44 @@
+{
+    "containerDefinitions": [
+        {
+            "name": "application",
+            "image": "<IMAGE_NAME>",
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "cicd-logs",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ],
+    "family": "LabStack-0d33a680-d686-4d8a-abd0-621274fb9c9e-mUPRTBsvTEyAcMQBjXNMuH-0-TaskDefinition-oaeeOiyKCX5Z",
+    "taskRoleArn": "arn:aws:iam::529212817729:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::529212817729:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "status": "ACTIVE",
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+    "tags": [
+        {
+            "key": "Name",
+            "value": "GreenTaskDefinition"
+        }
+    ]
+}

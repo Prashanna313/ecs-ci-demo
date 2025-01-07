@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS - What's new?</title>
+<link rel="stylesheet" href="css/app.css" type="text/css" media="all" />
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div><img src="img/aws-training-logo.png" /></div>
+        </div>
+        <h1>AWS Last news!</h1>
+        <div id="news-slot">Loading...</div>
+        <div id="footer">© <span id="year"></span>, Amazon Web Services, Inc. or its affiliates. All rights reserved.</div>
+    </div>
+<script>
+const e = document.getElementById("year");
+const d = new Date();
+e.innerHTML = d.getFullYear();
+</script>
+<script src="js/news.js"></script>
+</body>
+</html>
